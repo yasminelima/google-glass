@@ -8,6 +8,6 @@
     <tr>
         <td>
         <h3>HTML5, CSS3 e JS [40H]</h3>
-        <p>📺 Curso em Video <br><br> ⏰ Carga Horária: 40h<br><br> 📜 Certificado: <a href="https://www.estudonauta.com/validacao-de-certificado/?codigo=78CB0-63D5-2" target="_blank">EM ANDAMENTO</a></p>
+        <p>📺 Curso em Video <br><br> ⏰ Carga Horária: 40h<br><br> 📜 Certificado: <a href="https://www.estudonauta.com/validacao-de-certificado/?codigo=78CB0-63D5-2" target="_blank">78CB0-63D5-2</a></p>
         </td>
     </tr>
