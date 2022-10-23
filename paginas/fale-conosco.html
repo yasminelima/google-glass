@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <script language="javascript" src="../javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value)
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot; 
+        }
+    </script>
+</head>
+
+
+
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2> 
+            </hgroup>
+
+            <img id="icone" src="../imagens/contato.png" alt="Óculos pequeno">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul type="circle">
+                    <li onmouseover="mudaFoto('../imagens/home.png')" onmouseout="mudaFoto('../imagens/contato.png')"><a href="../index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('../imagens/especificacoes.png')" onmouseout="mudaFoto('../imagens/contato.png')"><a href="../paginas/specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('../imagens/fotos.png')" onmouseout="mudaFoto('../imagens/contato.png')"><a href="../paginas/fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('../imagens/multimidia.png')" onmouseout="mudaFoto('../imagens/contato.png')"><a href="../paginas/multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('../imagens/contato.png')" onmouseout="mudaFoto('../imagens/contato.png')"><a href="../paginas/fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="corpo-full">
+            <article id="noticiaprincipal">
+                <header id="cabecalhoartigo">
+                    <hgroup>
+                        <h1>Fale Conosco > Contato</h1>
+                        <h3>Formulário de Contato</h3>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+        <form method="post" id="fcontato" action="mailto:mizenha16@gmail.com" oninput="calc_total()">
+
+            <fieldset id="usuario">
+                <legend>Identificação do Usuário</legend>
+                    <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+
+                    <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="Até 8 dígitos"/></p>
+                    
+                    <p><label for="cEmail">E-mail:</label><input type="email" name="tEmail" id="cEmail" size="20" maxlength="40"/></p>
+                    
+                    <fieldset id="sexo">
+                        <legend>Sexo:</legend>
+                            <input type="radio" name="tSex" id="cMas" checked/> <label for="cMas">Masculino</label>
+                            <br>
+                            <input type="radio" name="tSex" id="cFem"/> <label for="cFem">Feminino</label>
+                    </fieldset>
+                    
+                    <p><label for="cData">Data de Nascimento:</label><input type="date" name="tData" id="cData"/></p>
+            </fieldset>
+
+            <fieldset id="endereco">
+            <legend>Endereço do Usuário</legend>
+                <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="13" max="80" placeholder="Rua, Av. Tra., Etc..."></input></p>
+
+                <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99999"></input></p>
+                
+                <p><label for="cEst">Estado:</label>
+                <select name="tEst" id="cEst">
+                    <optgroup label="Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="PA">Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                    </optgroup>
+                    <optgroup label="Centro-Oeste">
+                        <option value="DF">Distrito Federal</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select>
+                </p>
+                <p><label for="cCid">Cidade:</label>
+                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade"></p>
+             </fieldset>
+
+            <fieldset id="mensagem">
+            <legend>Mensagem do Usuário</legend>
+                <p><label for="cUrg">Grau de Urgência:</label>
+                Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Max</p>
+                <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem."></textarea></p>
+            </fieldset>
+
+            <fieldset id="pedido">
+            <legend>Quero um Google Glass</legend>
+                <p>
+                    <input type="checkbox" name="tPed" id="cPed" checked>
+                    <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+               
+                <p><label for="cCor">Cor:</label>
+                <input type="color" name="tCor" id="cCor" value="#606060"></p>
+               
+                <p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+
+               
+                <p><label for="cTot">Preço Total: R$</label>
+                <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
+            </fieldset>
+
+            <input type="image" name="tEnviar" id="cEnviar" src="../imagens/botao-enviar.png">
+            
+        </form>
+            </article>
+        </section>
+
+<footer id="rodape">
+<p id="gus">
+    Copyright &copy; 2013 - by <strong>Gustavo Guanabara</strong><br>
+    <a href="https://web.facebook.com/CursosEmVideo" target="_blank">Facebook</a> | <a href="https://twitter.com/cursosemvideo" target="_blank">Twitter</a> | <a href="https://github.com/gustavoguanabara" target="_blank">Github</a>
+</p>
+<p id="yas"> Página Desenvolvida por <strong>Yasmine Lima</strong><br><a href="https://github.com/yasminelima" target="_blank">Github</a> | <a href="https://www.linkedin.com/in/yasminelimadev/" target="_blank">Linkedin</a></p>
+<p id="clear"></p>
+</footer>
+</div>
+</body>
+</html>
